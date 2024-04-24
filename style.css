@@ -8,16 +8,16 @@ body {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  border: 2px solid purple;
+  border: 2px solid rgb(89, 48, 130);
   border-radius: 10px;
 }
 
 h1 {
-  color: purple;
+  color: rgb(89, 48, 130);
 }
 
 button {
-  background-color: purple;
+  background-color: rgb(89, 48, 130);
   color: white;
   padding: 10px 20px;
   margin-top: 10px;
@@ -33,7 +33,7 @@ ul {
 }
 
 li {
-  background-color: purple;
+  background-color: rgb(89, 48, 130);
   color: white;
   padding: 10px;
   margin-bottom: 5px;
@@ -55,7 +55,7 @@ body {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  border: 2px solid purple;
+  border: 2px solid rgb(89, 48, 130);
   border-radius: 10px;
 }
 
@@ -64,7 +64,7 @@ h1 {
 }
 
 button {
-  background-color: purple;
+  background-color: rgb(89, 48, 130);
   color: white;
   padding: 10px 20px;
   margin-top: 10px;
