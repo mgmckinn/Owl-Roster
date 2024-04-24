@@ -60,7 +60,7 @@ body {
 }
 
 h1 {
-  color: purple;
+  color: rgb(66, 15, 66);
 }
 
 button {
@@ -80,7 +80,7 @@ ul {
 }
 
 li {
-  background-color: purple;
+  background-color: rgb(89, 48, 130);
   color: white;
   padding: 20px;
   margin-bottom: 5px;
@@ -91,4 +91,13 @@ li {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+.logo {
+    width: 100px; /* adjust as needed */
+    height: auto; /* maintain aspect ratio */
+}
+@media print {
+    button {
+        display: none;
+    }
 }
