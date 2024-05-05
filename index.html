@@ -10,9 +10,15 @@
     </head>
 
     <body>
-        <input type="file" id="logo-upload" accept="image/*">
-        <input type="text" id="new-name" placeholder="New name">
-        <button onclick="addName()">Add name</button>
+        <h2>Choose Team Colors</h2>
+        <label for="primary-color">Primary Color:</label>
+        <input type="color" id="primary-color" name="primary-color" value="#000000">
+        <label for="secondary-color">Text Color:</label>
+        <input type="color" id="secondary-color" name="secondary-color" value="#FFFFFF">
+    <h2>Choose Team Logo:</h2>
+    <input type="file" id="logo-upload" accept="image/*">
+        <div><input type="text" id="new-name" placeholder="New name">
+        <button onclick="addName()">Add name</button></div>
         <div class="container">
             <img src="./IMG_3364.jpeg" alt="Team Logo" id="team-logo" width="150px">
             <h1> Batting Order</h1>

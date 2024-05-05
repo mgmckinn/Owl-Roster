@@ -69,3 +69,31 @@ document.getElementById("logo-upload").addEventListener("change", function (e) {
   };
   reader.readAsDataURL(e.target.files[0]);
 });
+
+document.getElementById("primary-color").addEventListener("input", function () {
+  var color = this.value;
+  document.querySelector("h1").style.backgroundColor = color;
+  var playerListItems = document.querySelectorAll("#player-list li");
+  playerListItems.forEach(function (item) {
+    item.style.backgroundColor = color;
+  });
+  var buttons = document.querySelectorAll("button");
+  buttons.forEach(function (button) {
+    button.style.backgroundColor = color;
+  });
+});
+
+document
+  .getElementById("secondary-color")
+  .addEventListener("input", function () {
+    var color = this.value;
+    document.querySelector("h1").style.color = color;
+    var playerListItems = document.querySelectorAll("#player-list li");
+    playerListItems.forEach(function (item) {
+      item.style.color = color;
+    });
+    var buttons = document.querySelectorAll("button");
+    buttons.forEach(function (button) {
+      button.style.color = color;
+    });
+  });
