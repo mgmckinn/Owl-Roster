@@ -5,8 +5,6 @@ This is a simple web application for managing a team roster. It allows users to 
 ## Features
 
 - Add and edit player names in the batting order list
-- Change the team logo
-- Customize the color scheme of the batting order list
 - Print the team roster
 
 ## Usage
