@@ -61,3 +61,11 @@ var listItems = document.getElementById('player-list').getElementsByTagName('li'
 for (var i = 0; i < listItems.length; i++) {
     listItems[i].onclick = makeEditable;
 }
+
+document.getElementById("logo-upload").addEventListener("change", function (e) {
+  var reader = new FileReader();
+  reader.onload = function (event) {
+    document.getElementById("roster-logo").src = event.target.result;
+  };
+  reader.readAsDataURL(e.target.files[0]);
+});
