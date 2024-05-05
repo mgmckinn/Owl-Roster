@@ -26,3 +26,38 @@ function shuffleArray(array) {
 document.getElementById("print-btn").addEventListener("click", function () {
   window.print();
 });
+
+// Function to add a new name
+function addName() {
+    var newName = document.getElementById('new-name').value;
+    if (newName) {
+        var li = document.createElement('li');
+        li.textContent = newName;
+        li.onclick = makeEditable;
+        document.getElementById('player-list').appendChild(li);
+        document.getElementById('new-name').value = '';
+    }
+}
+
+// Function to make an element editable
+function makeEditable() {
+    var input = document.createElement('input');
+    input.value = this.textContent;
+    this.textContent = '';
+    this.appendChild(input);
+    input.focus();
+    input.onblur = function() {
+        this.parentNode.textContent = this.value;
+    };
+    input.onkeydown = function(e) {
+        if (e.key === 'Enter') {
+            this.blur();
+        }
+    };
+}
+
+// Add the onclick event to existing list items
+var listItems = document.getElementById('player-list').getElementsByTagName('li');
+for (var i = 0; i < listItems.length; i++) {
+    listItems[i].onclick = makeEditable;
+}

@@ -65,3 +65,25 @@ li {
     display: none;
   }
 }
+
+@media print {
+    #new-name {
+        display: none;
+    }
+}
+
+@media print {
+    #new-name, #add-name-btn {
+        display: none;
+    }
+}
+
+@media print {
+    body {
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+        transform: scale(0.98);
+        transform-origin: top;
+    }
+}
