@@ -10,19 +10,26 @@
     </head>
 
     <body>
+        <div id="non-printable-content">
         <h2>Choose Team Colors</h2>
         <label for="primary-color">Primary Color:</label>
         <input type="color" id="primary-color" name="primary-color" value="#000000">
         <label for="secondary-color">Text Color:</label>
         <input type="color" id="secondary-color" name="secondary-color" value="#FFFFFF">
-    <h2>Choose Team Logo:</h2>
-    <input type="file" id="logo-upload" accept="image/*">
+        <h2>Choose Team Logo:</h2>
+        <input type="file" id="logo-upload" accept="image/*" style="display: none;">
         <div><input type="text" id="new-name" placeholder="New name">
-        <button onclick="addName()">Add name</button></div>
+            <button onclick="addName()">Add name</button>
+        </div>
+        </div>
+        <h1> Batting Order</h1>
         <div class="container">
-            <img src="./IMG_3364.jpeg" alt="Team Logo" id="team-logo" width="150px">
-            <h1> Batting Order</h1>
-            
+
+        <label for="logo-upload">
+            <img id="roster-logo" src="default-logo.png" class="logo">
+        </label>
+
+
             <ul id="player-list">
                 <li>Rebecca</li>
                 <li>Elle</li>
@@ -35,8 +42,12 @@
                 <li>Jo Jo</li>
                 <li>Sydney</li>
             </ul>
+            <div id="non-printable-content">
+                <!-- All other content goes here -->
+            
             <button onclick="generateOrder()">Generate Batting Order</button>
             <button id="print-btn">Print Batting Order</button>
+        </div>
         </div>
         <script src="script.js"></script>
     </body>
