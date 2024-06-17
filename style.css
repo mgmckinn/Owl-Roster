@@ -44,6 +44,7 @@ h1{  text-shadow: 3px 3px 10px #000000;
 li {
   background-color: rgb(89, 48, 130);
   color: white;
+  font-weight: bold;
   padding: 20px;
   margin-bottom: 5px;
   border-radius: 5px;
@@ -56,7 +57,7 @@ li {
 }
 
 .logo {
-  width: 100px;
+  width: 200px;
   height: auto;
 }
 
