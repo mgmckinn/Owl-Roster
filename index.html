@@ -11,35 +11,39 @@
 
     <body>
         <div id="non-printable-content">
-        <h2>Choose Team Colors</h2>
-        <label for="primary-color">Primary Color:</label>
-        <input type="color" id="primary-color" name="primary-color" value="#000000">
-        <label for="secondary-color">Text Color:</label>
-        <input type="color" id="secondary-color" name="secondary-color" value="#FFFFFF">
-        <h2>Choose Team Logo:</h2>
-        <input type="file" id="logo-upload" accept="image/*" style="display: none;">
-        <div><input type="text" id="new-name" placeholder="New name">
-            <button onclick="addName()">Add name</button>
+            <h2>Choose Team Colors</h2>
+            <label for="primary-color">Primary Color:</label>
+            <input type="color" id="primary-color" name="primary-color" value="#000000">
+            <label for="secondary-color">Text Color:</label>
+            <input type="color" id="secondary-color" name="secondary-color" value="#FFFFFF">
+
+            <h2>Choose Team Logo:</h2>
+            <input type="file" id="logo-upload" accept="image/*" style="display: none;">
+
+            <div>
+                <!-- Input for adding a new name -->
+                <input type="text" id="new-name" placeholder="New name">
+                <button onclick="addName()">Add name</button>
+            </div>
         </div>
-        </div>
-        <h1> Batting Order</h1>
+
+        <h1>Batting Order</h1>
         <div class="container">
+            <label for="logo-upload">
+                <img id="roster-logo" src="default-logo.png" class="logo">
+            </label>
 
-        <label for="logo-upload">
-            <img id="roster-logo" src="default-logo.png" class="logo">
-        </label>
+            <!-- Player list -->
+            <ul id="player-list"></ul>
 
-
-            <ul id="player-list">
-               
-            </ul>
             <div id="non-printable-content">
-                <!-- All other content goes here -->
-            
-            <button onclick="generateOrder()">Generate Batting Order</button>
-            <button id="print-btn">Print Batting Order</button>
+                <!-- Buttons for generating and printing the batting order -->
+                <button onclick="generateOrder()">Generate Batting Order</button>
+                <button id="print-btn">Print Batting Order</button>
+            </div>
         </div>
-        </div>
+
+        <!-- Link to the JavaScript file -->
         <script src="script.js"></script>
     </body>
 

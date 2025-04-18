@@ -98,3 +98,67 @@ document.getElementById("primary-color").addEventListener("input", function () {
         button.style.color = color;
       });
     });
+    // Add an event listener to handle the Enter key
+document.getElementById('new-name').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        addName();
+    }
+});
+
+function addName() {
+    const nameInput = document.getElementById('new-name');
+    const playerName = nameInput.value.trim();
+
+    if (playerName) {
+        const playerList = document.getElementById('player-list');
+        const listItem = document.createElement('li');
+        listItem.textContent = playerName;
+
+        // Create a delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function () {
+            deleteName(listItem);
+        };
+
+        listItem.appendChild(deleteButton);
+        playerList.appendChild(listItem);
+
+        // Clear the input field
+        nameInput.value = '';
+    } else {
+        alert('Please enter a valid name.');
+    }
+}
+
+function deleteName(listItem) {
+    listItem.remove();
+}
+function addName() {
+  const nameInput = document.getElementById("new-name");
+  const playerName = nameInput.value.trim();
+
+  if (playerName) {
+    const playerList = document.getElementById("player-list");
+    const listItem = document.createElement("li");
+    listItem.textContent = playerName;
+
+    // Add a click event to delete the player when their name is clicked
+    listItem.onclick = function () {
+      deleteName(listItem);
+    };
+
+    playerList.appendChild(listItem);
+
+    // Clear the input field
+    nameInput.value = "";
+  } else {
+    alert("Please enter a valid name.");
+  }
+}
+
+function deleteName(listItem) {
+  if (confirm("Are you sure you want to delete this player?")) {
+    listItem.remove();
+  }
+}
