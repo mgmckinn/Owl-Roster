@@ -114,11 +114,14 @@ li {
 }
 
 
-/* Make the roster compact for printing */
+//* ...existing code... */
+
+/* Print styles to fit roster on one page */
 @media print {
   body {
     margin: 0.5in;
     font-size: 12px;
+    background: #fff !important;
   }
   h1, h2 {
     font-size: 18px;
@@ -134,22 +137,25 @@ li {
     list-style: decimal inside;
     font-size: 14px;
   }
-  #player-list li {
+  #player-list li,
+  #player-list .player-item {
     margin: 2px 0;
     padding: 2px 0;
+    line-height: 1.2;
   }
   #roster-logo {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 60px;
+    max-height: 60px;
     margin-bottom: 8px;
   }
-  #non-printable-content {
-    display: none !important;
-  }
-  button {
+  #non-printable-content,
+  button,
+  input[type="color"],
+  input[type="file"] {
     display: none !important;
   }
 }
+
 
 /* For on-screen compactness as well */
 #player-list {
