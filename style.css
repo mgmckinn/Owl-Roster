@@ -1,170 +1,180 @@
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  color: snow;
+  font-size: 3vw;
+  margin: 2vw 0 1vw 0;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 10px #000000;
 }
 
 .container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 2px solid rgb(89, 48, 130);
-  border-radius: 10px;
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2vw 0;
+  box-sizing: border-box;
 }
 
-
-button {
-  background-color: rgb(89, 48, 130);
-  color: white;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+.logo, #roster-logo {
+  width: 14vw;
+  max-width: 180px;
+  min-width: 80px;
+  height: auto;
+  margin: 2vw auto 2vw auto;
+  display: block;
 }
 
-button:hover {
-  background-color: rgb(66, 15, 66);
-}
+/* ...existing styles above... */
 
-ul {
-  list-style-type: none;
+/* Main list styles for screen */
+ul#player-list {
+  width: 75vw;
+  max-width: 75vw;
+  min-width: 250px;
+  margin: 0 0 2vw 0;
   padding: 0;
-  margin: 0;
+  list-style: decimal inside;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5vw;
 }
 
-h1{  text-shadow: 3px 3px 10px #000000;
-  color: snow;
-  font-size: 50px;
-
-}
-
-li {
+#player-list li,
+.player-item {
   background-color: rgb(89, 48, 130);
   color: white;
   font-weight: bold;
-  padding: 20px;
-  margin-bottom: 5px;
-  border-radius: 5px;
+  padding: 1.2vw 0;
+  margin: 0.4vw 0;
+  border-radius: 0.7vw;
+  width: 98%;
+  text-align: center;
+  font-size: 2vw;
+  letter-spacing: 0.07em;
   animation: fadeIn 1s ease-in-out;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.logo {
-  width: 200px;
-  height: auto;
-}
-
+/* Print styles: fill the page vertically, 75% horizontally */
 @media print {
-  button {
-    display: none;
-  }
-}
-
-@media print {
-    #new-name {
-        display: none;
-    }
-}
-
-@media print {
-    #new-name, #add-name-btn {
-        display: none;
-    }
-}
-
-@media print {
-    body {
-        width: 210mm;
-        height: 297mm;
-        overflow: hidden;
-        transform: scale(0.98);
-        transform-origin: top;
-    }
-}
-@media print {
-  body {
-    zoom: 90%; /* Adjust this value as needed to fit the page */
-  }
-  #player-list {
-    page-break-inside: avoid; /* Avoid breaking the list across multiple pages */
-  }
-}
-@media print {
-  body {
-    zoom: 90%; /* Adjust this value as needed to fit the page */
-  }
-  #player-list {
-    page-break-inside: avoid; /* Avoid breaking the list across multiple pages */
-  }
-  #choose-colors, #choose-logo {
-    display: none; /* Hide these sections when printing */
-  }
-}
-@media print {
-  #non-printable-content {
-    display: none;
-  }
-}
-
-
-//* ...existing code... */
-
-/* Print styles to fit roster on one page */
-@media print {
-  body {
-    margin: 0.5in;
-    font-size: 12px;
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     background: #fff !important;
-  }
-  h1, h2 {
-    font-size: 18px;
-    margin: 8px 0;
-  }
-  .container {
-    padding: 0;
-    margin: 0;
-  }
-  #player-list {
-    margin: 0;
-    padding: 0;
-    list-style: decimal inside;
-    font-size: 14px;
-  }
-  #player-list li,
-  #player-list .player-item {
-    margin: 2px 0;
-    padding: 2px 0;
-    line-height: 1.2;
-  }
-  #roster-logo {
-    max-width: 60px;
-    max-height: 60px;
-    margin-bottom: 8px;
+    box-shadow: none !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
   }
   #non-printable-content,
   button,
   input[type="color"],
-  input[type="file"] {
+  input[type="file"],
+  input[type="text"] {
     display: none !important;
+  }
+  .container {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 22pt;
+    margin: 10pt 0 6pt 0;
+    color: #222 !important;
+    text-shadow: none;
+    text-align: center !important;
+  }
+  #roster-logo {
+    max-width: 80pt;
+    max-height: 80pt;
+    margin-bottom: 10pt;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #player-list {
+    font-size: 13pt;
+    width: 75vw;
+    max-width: 75vw;
+    min-width: 200px;
+    margin: 0;
+    padding: 0;
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    justify-content: space-between;
+  }
+  #player-list li {
+    width: 98%;
+    margin: 2pt 0;
+    padding: 8pt 0;
+    background: rgb(89, 48, 130) !important;
+    color: white !important;
+    border-radius: 0;
+    font-size: 13pt;
+    letter-spacing: 0.07em;
+    page-break-inside: avoid;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
+/* ...existing styles... */
 
-/* For on-screen compactness as well */
-#player-list {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-}
-#player-list li {
-  margin: 4px 0;
-  padding: 2px 0;
+button {
+  background: linear-gradient(90deg, #7c3aed 0%, #592f82 100%);
+  color: #fff;
+  padding: 0.8vw 2vw;
+  margin-top: 1vw;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  font-size: 1.2vw;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 16px rgba(89,48,130,0.15), 0 1.5px 4px rgba(0,0,0,0.07);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
+button:hover, button:focus {
+  background: linear-gradient(90deg, #592f82 0%, #7c3aed 100%);
+  color: #ffeedd;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(89,48,130,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  outline: none;
+}
