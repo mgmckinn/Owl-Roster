@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-}
+    }
 
 h1 {
   color: snow;
@@ -89,7 +89,7 @@ button {
   letter-spacing: 0.08em;
   box-shadow: 0 4px 16px rgba(89,48,130,0.15), 0 1.5px 4px rgba(0,0,0,0.07);
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-
+}
   @media print {
     html, body {
       width: 100vw;
@@ -104,6 +104,7 @@ button {
       align-items: center !important;
       justify-content: center !important;
     }
+  }
     /* Hide everything except the logo, title, and player list */
     #non-printable-content,
     button,
@@ -165,4 +166,3 @@ button {
       align-items: center;
       justify-content: center;
     }
-  }
