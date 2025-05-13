@@ -7,6 +7,9 @@
         <title>Owlettes Batting Order</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="./IMG_3364.jpeg" type="Owlettes">
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js">
+
+        </script>
     </head>
 
     <body>
@@ -35,15 +38,13 @@
 
             <!-- Player list -->
             <ul id="player-list">
-                
                 <!-- List items will be dynamically generated here -->
-                <li class="player-item">
-                    <span class="player-name">Player 1</span>
+            </ul>
+                
                     <div>
                         <button class="remove-btn" onclick="removeName(this)">Remove</button>
                     </div>
                     
-            </ul>
 
             <div id="non-printable-content">
                 <!-- Buttons for generating and printing the batting order -->
@@ -64,6 +65,7 @@
                     reader.readAsDataURL(file);
                 }
             });
+            
         </script>
         <script src="script.js"></script>
     </body>

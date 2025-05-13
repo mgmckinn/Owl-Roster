@@ -1,22 +1,22 @@
 /** @format */
 
 const defaultPlayers = [
-  "Maddie",
   "Stella",
-  "Remi",
-  "Norah",
   "Colette",
-  "Cara",
-  "Clara",
-  "Lena",
-  "London",
   "Reese",
-  "Maxie",
+  "Maddie",
   "Jolie",
+  "Clara",
+  "Norah",
+  "Remi",
+  "Cara",
+  "London",
+  "Maxie",
+  "Lena",
 ];
 
-// Populate the list on load
 window.onload = function () {
+  // Generate the player list
   const playerList = document.getElementById("player-list");
   playerList.innerHTML = "";
   defaultPlayers.forEach((name) => {
@@ -37,6 +37,14 @@ window.onload = function () {
     .addEventListener("keydown", function (event) {
       if (event.key === "Enter") addName();
     });
+
+  // Enable drag-and-drop sorting for the player list
+  if (window.Sortable) {
+    Sortable.create(document.getElementById("player-list"), {
+      animation: 150,
+      ghostClass: "sortable-ghost",
+    });
+  }
 };
 
 function addName() {
