@@ -90,79 +90,75 @@ button {
   box-shadow: 0 4px 16px rgba(89,48,130,0.15), 0 1.5px 4px rgba(0,0,0,0.07);
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
-  @media print {
-    html, body {
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      background: #fff !important;
-      box-shadow: none !important;
-      text-align: center !important;
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
+@media print {
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #fff !important;
+    box-shadow: none !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
-    /* Hide everything except the logo, title, and player list */
-    #non-printable-content,
-    button,
-    input[type="color"],
-    input[type="file"],
-    input[type="text"] {
-      display: none !important;
-    }
-    .container {
-      width: 100vw;
-      min-height: 100vh;
-      padding: 0;
-      margin: 0;
-      align-items: center !important;
-      justify-content: center !important;
-      box-sizing: border-box;
-      display: flex !important;
-      flex-direction: column !important;
-    }
-    h1 {
-      font-size: 22pt;
-      margin: 10pt 0 16pt 0;
-      color: #222 !important;
-      text-shadow: none;
-      text-align: center !important;
-      display: block;
-    }
-    #roster-logo {
-      max-width: 90pt;
-      max-height: 90pt;
-      margin: 0 auto 18pt auto;
-      display: block;
-    }
-    #player-list {
-      font-size: 14pt;
-      width: 60vw;
-      max-width: 60vw;
-      min-width: 200px;
-      margin: 0 auto;
-      padding: 0;
-      page-break-inside: avoid;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    #player-list li {
-      width: 100%;
-      margin: 4pt 0;
-      padding: 10pt 0;
-      background: rgb(89, 48, 130) !important;
-      color: white !important;
-      border-radius: 0.5vw;
-      font-size: 14pt;
-      letter-spacing: 0.07em;
-      page-break-inside: avoid;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  /* Hide everything except the title and player list */
+  #non-printable-content,
+  #roster-logo,
+  .logo,
+  button,
+  input[type="color"],
+  input[type="file"],
+  input[type="text"] {
+    display: none !important;
+  }
+  .container {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  h1 {
+    font-size: 28pt;
+    margin: 20pt 0 20pt 0;
+    color: #222 !important;
+    text-shadow: none;
+    text-align: center !important;
+    display: block;
+  }
+  #player-list {
+    font-size: 16pt;
+    width: 60vw;
+    max-width: 60vw;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 0;
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #player-list li {
+    width: 100%;
+    margin: 8pt 0;
+    padding: 12pt 0;
+    background: rgb(89, 48, 130) !important;
+    color: white !important;
+    border-radius: 0.5vw;
+    font-size: 16pt;
+    letter-spacing: 0.07em;
+    page-break-inside: avoid;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
